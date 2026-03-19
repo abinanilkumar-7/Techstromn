@@ -1,0 +1,32 @@
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-neon-red);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  box-shadow: 0 0 10px var(--color-neon-red);
+  mix-blend-mode: difference;
+}
+
+.cursor.clicked {
+  width: 15px;
+  height: 15px;
+  background-color: var(--color-neon-red);
+  box-shadow: 0 0 20px var(--color-neon-red);
+}
+
+.cursor.hidden {
+  opacity: 0;
+}
+
+body {
+  cursor: none; /* Hide default cursor */
+}
+
+a, button, .btn {
+  cursor: none; /* Ensure links also don't show default cursor */
+}

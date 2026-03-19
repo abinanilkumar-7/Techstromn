@@ -1,0 +1,78 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+.nav-content{
+  margin: 0;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 15px 0;
+  border-bottom: 2px solid var(--color-deep-red);
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.logo {
+  font-family: 'Harry Potter', sans-serif;
+  font-size: 2rem;
+  color: var(--color-neon-white);
+  text-decoration: none;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-neon-red);
+  text-shadow: 0 0 8px var(--color-neon-red);
+}
+
+.btn-register {
+  padding: 8px 20px !important;
+  border: 1px solid var(--color-neon-red);
+  color: var(--color-neon-red) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: var(--color-neon-red);
+  color: var(--color-black) !important;
+  box-shadow: 0 0 15px var(--color-neon-red);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Mobile menu implementation later */
+  }
+}
